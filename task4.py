@@ -1,4 +1,10 @@
-def get_sum(num1,num2):
-    res = num1 + num2
-    return res;
-print(get_sum(5,2))
+def check_num(num):
+    remains = num % 2
+    if remains == 0:
+        result = 'Четное'
+    else:
+        result = 'Не четное'
+    return result
+
+print(check_num(2))
+
