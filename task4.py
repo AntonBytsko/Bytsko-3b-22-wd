@@ -6,5 +6,5 @@ def check_num(num):
         result = 'Не четное'
     return result
 
-print(check_num(2))
 
+print(check_num(2))
