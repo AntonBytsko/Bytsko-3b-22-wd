@@ -3,7 +3,7 @@
 экран.
 """
 
-file = open('text.txt', 'r', encoding='utf-8')
-text = file.read()
+file = open('text.txt', 'r', encoding='utf-8')  # Открытие файла
+text = file.read()                              # Чтение файла
 print(text)
-file.close()
+file.close()                                    # Закрытие файла (обязательно всегда)
