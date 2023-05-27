@@ -5,26 +5,30 @@
 
 
 def search_min_val(list1):
-    low_val = 0                 # Объявляем минимальное значение = 0
-    count = 0
+    low_val1 = list1[0]         # Объявляем переменную с первым значением из списка
+    low_val2 = list1[0]         # Объявляем переменную с первым значением из списка
+                                # для поиска второго наименьшего числа
     res = []
 
-    list1.sort()
+    # list1.sort()
+
+    # Поиск первого наименьшего числа в списке
     for i in list1:             # Цикл по списку
-        if low_val <= i:        # Если текущее значение списка меньше или равно (для нуля) минимальному
-            low_val = i         # обновляем минимальное значение текущим значением списка
-            res.append(i)
-            count += 1
-
-            if count == 2:
-                break
-            else:
-                pass
-
+        if i < low_val1:        # Если текущее значение списка меньше предыдущего
+            low_val1 = i        # обновляем значение low_val текущим значением списка
         else:
             pass
+    res.append(low_val1)
+
+    # Поиск второго наименьшего числа в списке
+    for k in list1:
+        if k < low_val2 and k != low_val1:
+            low_val2 = k
+        else:
+            pass
+    res.append(low_val2)
 
     return res
 
 
-print(search_min_val([1, 6, 3, 8, 2, 10, 23, 4]))
+print(search_min_val([9, 6, 3, 8, 1, 10, 23, 2]))
