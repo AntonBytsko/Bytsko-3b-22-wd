@@ -11,9 +11,9 @@ def summ(number):
         arg = int(number)
     except ValueError:
         return print('Введено не целое число')
-    res = 0
 
     # Сумма чисел от 1 до аргумента
+    res = 0
     for i in range(1, arg + 1):
         # print(i)  # для отладки
         res += i
