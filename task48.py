@@ -14,3 +14,4 @@ for i in arr:
         count += 1
         res = amount / count   # Делим сумму элементов (которые больше 10) на их количество
 print(res)
+
