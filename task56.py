@@ -4,6 +4,8 @@
 исключение.
 """
 
+from operator import itemgetter
+
 
 def word_count(file_name):
     # Проверка файла
@@ -24,7 +26,6 @@ def word_count(file_name):
             if i == k:
                 count += 1
             words_cnt.update({i: count})
-    from operator import itemgetter
     sorted_words_cnt = dict(sorted(words_cnt.items(), key=itemgetter(1)))  # Сортировка словаря по значениям ключей
     reversed_word_cnt = dict(reversed(sorted_words_cnt.items()))           # Переворот словаря
     return print(list(reversed_word_cnt.keys())[0])                        # Вывод на экран первый элемент словаря
