@@ -6,13 +6,16 @@
 
 
 def summ(number):
+    # Проверка аргумента
     try:
         arg = int(number)
     except ValueError:
         return print('Введено не целое число')
     res = 0
+
+    # Сумма чисел от 1 до аргумента
     for i in range(1, arg + 1):
-        print(i)
+        # print(i)  # для отладки
         res += i
     return print(f'Сумма чисел от 1 до {arg} = {res}')
 
