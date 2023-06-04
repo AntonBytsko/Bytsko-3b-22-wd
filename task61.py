@@ -5,6 +5,7 @@
 import pandas as pd
 import math
 
+# Реализация через itemgetter
 """
 import math
 from operator import itemgetter
@@ -40,3 +41,17 @@ sorted_df = df.sort_values(by='distance')      # Сортировка внутр
 np = sorted_df['coordinates'].to_numpy()       # Преобразование DataFrame в NumPy массив
 # print(sorted_df)  # для отладки
 print(np)
+
+# Реализация через подстановку функции в параметр sorted
+
+"""
+arr = [(1, 2), (3, 4), (-1, 5), (6, -3)]
+
+
+def sort_by_dist(element):
+    return math.dist((0, 0), element)
+
+
+sortedList = sorted(arr, key=sort_by_dist)
+print(sortedList)
+"""
